@@ -3,6 +3,7 @@ import logo1 from "./../../assets/logo1.png";
 import logo from "../../assets/logo-white.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 function Header({ whiteV, hideCart }) {
   const openDrawer = () => {
@@ -13,7 +14,9 @@ function Header({ whiteV, hideCart }) {
   return (
     <div>
       <header className="col-12 text-center mt-3 mb-4">
-        <img src={whiteV ? logo : logo1} alt="logo" />
+        <Link to="/">
+          <img src={whiteV ? logo : logo1} alt="logo" />
+        </Link>
       </header>
       {!hideCart && (
         <button
