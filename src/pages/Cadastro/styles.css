@@ -24,7 +24,7 @@ button {
   margin-top: 1rem;
 }
 
-.row {
+.row-image {
   margin-top: 5rem;
 }
 
@@ -43,7 +43,7 @@ button {
   flex-direction: column;
 }
 
-input {
+.form input {
   margin-top: 1rem;
   outline: none;
   width: 80%;

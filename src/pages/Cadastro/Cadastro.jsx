@@ -1,15 +1,20 @@
 import React from "react";
 import "./styles.css";
+import Header from "../../components/Header/Header";
 function Cadastro() {
   return (
     <div className="  bg-primary cadastro container-fluid">
       <div className="logo">
-        <img src="src\assets\logo-white.png" alt="logo" />
+        <Header />
       </div>
 
-      <div className="row">
+      <div className="row  row-image">
         <div className="col-6 my-auto text-right">
-          <img src="src\assets\illustration.svg" alt="" className="img-fluid" />
+          <img
+            src="src\assets\illustration (1).svg"
+            alt=""
+            className="img-fluid"
+          />
         </div>
 
         <div className="col-6">
