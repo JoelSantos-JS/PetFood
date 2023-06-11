@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import "./styles.css";
+import Product from "../../components/Product/Product";
 function Checkout() {
   return (
     <div className="h-100">
@@ -123,14 +124,14 @@ function Checkout() {
               </div>
             </div>
 
-            <div className="row mt-3 pl-4 d-flex justify-content-between ">
-              <span className="font-weight-bold">Total:</span>
-              <div className="col-6 pl-0">
+            <div className="row mt-3 pl-2">
+              <div className="col-12  align-items-center d-flex justify-content-between ">
+                <span className="font-weight-bold">Total:</span>
                 <span className="font-weight-bold">R$ 0,00</span>
               </div>
             </div>
 
-            <div className="row mt-3 pl-4 d-flex mb-4">
+            <div className="row mt-2 pl-4 d-flex mb-4">
               <div className="col-6 pl-0">
                 <button className="btn btn-lg btn-block btn-primary">
                   Finalizar Compra
@@ -144,9 +145,17 @@ function Checkout() {
             </div>
           </div>
 
-          <div className="col-6 mt-4">
-            <div className="box col-8">
-              <h6 className="mt-2">Minha Sacola (4)</h6>
+          <div className="col-6 mt-4 ">
+            <div className="box col box-sidebar">
+              <h4 className="mt-2 text-center">Minha Sacola (4)</h4>
+
+              <div className="row products">
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+              </div>
             </div>
           </div>
         </div>
