@@ -1,0 +1,5 @@
+.sidebar .products {
+  height: calc(100% - 150px);
+  overflow: auto;
+  align-content: flex-start;
+}

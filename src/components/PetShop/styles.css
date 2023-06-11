@@ -1,0 +1,44 @@
+.petshop {
+  list-style: none;
+  padding: 7px;
+  margin-right: 5rem;
+  border-radius: 5px;
+  border-bottom: 3px;
+}
+
+.petshop img {
+  width: 5rem;
+  border-radius: 8px;
+  border-radius: 5px;
+  vertical-align: baseline;
+}
+
+.petshop b {
+  margin-bottom: 0;
+}
+
+.petshop-infos span {
+  vertical-align: middle;
+  color: #626264;
+}
+
+.infos {
+  margin-left: 1rem;
+  margin-top: -1px;
+}
+
+.title {
+  margin-left: 1rem;
+  margin-bottom: 3px;
+}
+
+.frete {
+  background-color: var(--bg-primary);
+  color: whitesmoke;
+  font-size: 0.5rem;
+  width: 6rem;
+  text-align: center;
+  border-radius: 8px;
+  flex-direction: column;
+  margin-left: 1rem;
+}

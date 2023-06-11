@@ -5,7 +5,7 @@ function Cadastro() {
   return (
     <div className="  bg-primary cadastro container-fluid">
       <div className="logo">
-        <Header />
+        <Header hideCart />
       </div>
 
       <div className="row  row-image">
@@ -41,13 +41,6 @@ function Cadastro() {
                 placeholder="Digite seu telefone"
               />
               <input type="text" name="cpf" id="cpf" placeholder="CPF" />
-
-              <input
-                type="date"
-                name="data"
-                id="data"
-                placeholder="Data de nascimento"
-              />
 
               <button className="bg-secondary text-white  btn btn-lg">
                 Finalizar Pedido

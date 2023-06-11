@@ -1,0 +1,26 @@
+.petshop-infos {
+  gap: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-img {
+  border-radius: 8px;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.frete {
+  display: flex;
+  background-color: var(--bg-primary);
+  color: whitesmoke;
+  font-size: 1rem;
+  padding: 4px;
+  border-radius: 8px;
+  flex-direction: column;
+}
