@@ -6,7 +6,7 @@ const INITITAL_STATE = {
 
 function shop(state = INITITAL_STATE, action) {
   switch (action.type) {
-    case "SET_CUSTOMER": {
+    case "@shop/SET_CUSTOMER": {
       /// logica
       return produce(state, (draft) => {
         draft.customer = action.customer;

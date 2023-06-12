@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Header from "../../components/Header/Header";
-import { useNavigate } from "react-router-dom";
+import { setCustomer } from "../../store/modules/shop/actions";
 import { useDispatch } from "react-redux";
 function Cadastro() {
   const dispacth = useDispatch();
 
   const goToCheckout = () => {
-    dispacth({ type: "@shop/SET_CUSTOMER", customer });
+    dispacth(setCustomer(customer));
   };
 
   const [customer, setCustomer] = useState({
