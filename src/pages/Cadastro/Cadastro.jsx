@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import Header from "../../components/Header/Header";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 function Cadastro() {
+  const dispacth = useDispatch();
+
+  const goToCheckout = () => {
+    dispacth({ type: "@shop/SET_CUSTOMER", customer });
+  };
+
+  const [customer, setCustomer] = useState({
+    id: new Date().getTime().toString(),
+    name: "",
+    email: "",
+    phone: "",
+    cpf: "",
+  });
+
   return (
     <div className="  bg-primary cadastro container-fluid">
       <div className="logo">
@@ -27,22 +43,42 @@ function Cadastro() {
                 name="nome"
                 id="nome"
                 placeholder="Nome Completo"
+                onChange={(e) => {
+                  setCustomer({ ...customer, name: e.target.value });
+                }}
               />
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Completo"
+                onChange={(e) => {
+                  setCustomer({ ...customer, email: e.target.value });
+                }}
               />
               <input
                 type="tel"
                 name="telefone"
                 id="telefone"
                 placeholder="Digite seu telefone"
+                onChange={(e) => {
+                  setCustomer({ ...customer, phone: e.target.value });
+                }}
               />
-              <input type="text" name="cpf" id="cpf" placeholder="CPF" />
+              <input
+                type="text"
+                name="cpf"
+                id="cpf"
+                placeholder="CPF"
+                onChange={(e) => {
+                  setCustomer({ ...customer, cpf: e.target.value });
+                }}
+              />
 
-              <button className="bg-secondary text-white  btn btn-lg">
+              <button
+                onClick={() => goToCheckout()}
+                className="bg-secondary text-white  btn btn-lg"
+              >
                 Finalizar Pedido
               </button>
             </div>
