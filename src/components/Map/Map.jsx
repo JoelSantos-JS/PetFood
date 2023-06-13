@@ -3,6 +3,7 @@ import GoogleMapReact from "google-map-react";
 import GoogleMap from "google-map-react";
 import "./styles.css";
 import Marker from "../marker";
+import data from "./../../data";
 import { useSelector } from "react-redux";
 
 function Map({ petshops }) {
@@ -19,7 +20,7 @@ function Map({ petshops }) {
             petshop={p}
             key={p.location.id}
             lat={p.location.lat}
-            len={p.location.len}
+            lng={p.location.len}
           />
         ))}
       </GoogleMapReact>

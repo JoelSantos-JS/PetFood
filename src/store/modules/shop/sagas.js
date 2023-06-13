@@ -8,5 +8,14 @@ export function* requestPetshops() {
 
   yield put(setPetshops(res.content));
 }
+export function* requestPetshop() {
+  const response = yield call(api.get, "/petshop");
+  const res = response.data;
 
-export default all([takeLatest("@shop/REQUEST_PETSHOPS", requestPetshops)]);
+  yield put(setPetshops(res.content));
+}
+
+export default all([
+  takeLatest("@shop/REQUEST_PETSHOPS", requestPetshops),
+  takeLatest("@shop/REQUEST_PETSHOPS", requestPetshops),
+]);

@@ -5,8 +5,8 @@ const INITITAL_STATE = {
   petshops: [],
   petshopMapSelected: null,
   mapCenter: {
-    lat: -13.851,
-    lng: -40.0812,
+    lat: -23.561684,
+    lng: -46.625378,
   },
 };
 
@@ -22,6 +22,18 @@ function shop(state = INITITAL_STATE, action) {
       /// logica
       return produce(state, (draft) => {
         draft.petshops = action.petshops;
+      });
+    }
+    case "@shop/SET_SHOP_MAP_SELECT": {
+      /// logica
+      return produce(state, (draft) => {
+        draft.petshopMapSelected = action.petshop;
+      });
+    }
+    case "@shop/SET_MAP_CENTER": {
+      /// logica
+      return produce(state, (draft) => {
+        draft.mapCenter = action.location;
       });
     }
 

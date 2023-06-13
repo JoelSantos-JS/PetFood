@@ -9,8 +9,6 @@ function Home() {
   const dispatch = useDispatch();
   const pet = useSelector((state) => state.shop.petshops);
 
-  console.log(pet);
-
   useEffect(() => {
     dispatch(requestPetshops());
   }, []);
@@ -28,8 +26,8 @@ function Home() {
             <PetShop petshop={item} key={item.id} />
           ))}
         </ul>
+        <Map petshops={pet} />
       </div>
-      <Map petshops={pet} />
     </div>
   );
 }

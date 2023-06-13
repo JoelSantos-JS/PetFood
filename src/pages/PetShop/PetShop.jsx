@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { BiCurrentLocation } from "react-icons/bi";
 import { RiMoneyDollarBoxLine } from "react-icons/ri";
 import Header from "../../components/Header/Header";
 import "./style.css";
 import ProductCard from "../../components/Product/ProductCard";
+import { useDispatch } from "react-redux";
 
 function PetShop() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch();
+  }, []);
+
   return (
     <div className="h-100">
       <Header whiteV={false} />
