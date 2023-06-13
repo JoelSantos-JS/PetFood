@@ -10,7 +10,7 @@ function Cadastro() {
     dispacth(setCustomer(customer));
   };
 
-  const [customer, setCustomer] = useState({
+  const [customer, seetCustomer] = useState({
     id: new Date().getTime().toString(),
     name: "",
     email: "",
@@ -44,7 +44,7 @@ function Cadastro() {
                 id="nome"
                 placeholder="Nome Completo"
                 onChange={(e) => {
-                  setCustomer({ ...customer, name: e.target.value });
+                  seetCustomer({ ...customer, name: e.target.value });
                 }}
               />
               <input
@@ -53,7 +53,7 @@ function Cadastro() {
                 id="email"
                 placeholder="Email Completo"
                 onChange={(e) => {
-                  setCustomer({ ...customer, email: e.target.value });
+                  seetCustomer({ ...customer, email: e.target.value });
                 }}
               />
               <input
@@ -62,7 +62,7 @@ function Cadastro() {
                 id="telefone"
                 placeholder="Digite seu telefone"
                 onChange={(e) => {
-                  setCustomer({ ...customer, phone: e.target.value });
+                  seetCustomer({ ...customer, phone: e.target.value });
                 }}
               />
               <input
@@ -71,7 +71,7 @@ function Cadastro() {
                 id="cpf"
                 placeholder="CPF"
                 onChange={(e) => {
-                  setCustomer({ ...customer, cpf: e.target.value });
+                  seetCustomer({ ...customer, cpf: e.target.value });
                 }}
               />
 
