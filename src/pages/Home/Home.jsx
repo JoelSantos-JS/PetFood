@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import Header from "../../components/Header/Header";
 import PetShop from "../../components/PetShop";
 import Map from "../../components/Map/Map";
+import { requestPetshops } from "../../store/modules/shop/actions";
+import { useDispatch, useSelector } from "react-redux";
 function Home() {
+  const dispatch = useDispatch();
+  const pet = useSelector((state) => state.shop.petshops);
+
+  console.log(pet);
+
+  useEffect(() => {
+    dispatch(requestPetshops());
+  }, []);
+
   return (
     <div className="h-100">
       <Header hideCart />
@@ -13,12 +24,12 @@ function Home() {
           <h5 className="text-primary h3">Mais proximos de Voce (5)</h5>
         </div>
         <ul className="col-12 petshop-list">
-          {[1, 2, 3, 4, 5].map((item) => (
-            <PetShop key={item} />
+          {pet.map((item) => (
+            <PetShop petshop={item} key={item.id} />
           ))}
         </ul>
-        <Map />
       </div>
+      <Map petshops={pet} />
     </div>
   );
 }
